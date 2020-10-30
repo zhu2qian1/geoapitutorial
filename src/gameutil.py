@@ -35,11 +35,12 @@ def city_name_guesser(data: geoapi.GeoAPIInterface) -> None:
         if response == answer:
             print("正解！")
             data.dataset.remove((question, answer))
-            print("残りは{}問あります".format(len(data.dataset)))
+            print("残りは{}問あります．".format(len(data.dataset)))
         elif response == "q":
             break
         else:
             print("不正解！正解は「{}」でした！".format(answer))
+            print("残りは{}問あります．".format(len(data.dataset)))
     end_game()
 
 
