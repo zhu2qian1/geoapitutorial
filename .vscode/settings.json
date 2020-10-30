@@ -1,8 +1,5 @@
 {
     "python.formatting.provider": "black",
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "ms-python.python",
-    "editor.formatOnType": true,
     "python.pythonPath": "C:\\Users\\zhu2q\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
-    "cmake.configureOnOpen": false
 }
