@@ -11,6 +11,6 @@
  3. エクスプローラーで run.py のあるフォルダに行きます．
  4. アドレスバーのところに cmd と入力するとその場所でコマンドプロンプトが開きます．
  5. python .\run.py (県名) と入力すると遊べます．
-  5.1. python .\run.py 東京都
-  5.2. python .\run.py 香川県
+  * python .\run.py 東京都
+  * python .\run.py 香川県
  6. enjoy!
