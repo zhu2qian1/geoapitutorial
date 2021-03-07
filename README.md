@@ -3,12 +3,8 @@
 - Python 3.9 で書きました！ 
 - Python 3.8 以前では動作確認してません．
 
-## How to Use
-1. donwload!
-2. unzip!
-3. play!
- 
-# うざけんなよ？
+
+# あそびかた
 真面目に書きます．
 1. このレポジトリをローカル環境にダウンロードします．
 2. zip形式でダウンロードしたならば解凍します．
@@ -18,6 +14,7 @@
    - python .\run.py 東京都
    - python .\run.py 香川県
 6. enjoy!
+7. 飽きたら q で Quit します。
 
 ## Credits
 - [HeartRails](http://geoapi.heartrails.com/api.html#)
