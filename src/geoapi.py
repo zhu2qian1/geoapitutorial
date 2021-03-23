@@ -30,6 +30,9 @@ class GeoAPIInterface:
         """
         Fetch data of GeoAPI.
         """
+        if not validate(prefecture):
+            raise ValueError("The name is not valid.")
+
         self.prefecture = prefecture
         if hasfetched(prefecture):
             self.json = fetch_pref_data(prefecture)
