@@ -46,6 +46,6 @@ def city_name_guesser(data: geoapi.GeoAPIInterface) -> None:
 
 def end_game() -> None:
     """
-    End the game showing credits and saying goodbye.
+    End the game showing credits and say goodbye.
     """
     print("Credits: HeartRails, @eq__s")
