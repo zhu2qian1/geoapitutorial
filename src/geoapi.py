@@ -102,7 +102,7 @@ def hasfetched(prefecture: str) -> bool:
     return False
 
 
-def validate(arg: str) -> bool:
+def validate(pref_name: str) -> bool:
     """
     Check whether the prefecture is valid.
     """
@@ -110,6 +110,6 @@ def validate(arg: str) -> bool:
 
     with open(".\\json\\prefectures.json", encoding="utf8") as f:
         prefectures: list = json.load(f)
-    if arg not in prefectures:
+    if pref_name not in prefectures:
         return False
     return True
