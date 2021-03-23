@@ -22,7 +22,7 @@ def city_name_guesser(data: geoapi.GeoAPIInterface) -> None:
     question: str
     answer: str
 
-    print("{}の市町村名前当てゲームにようこそ！".format(data.prefecture))
+    print(f"{data.prefecture}の市町村名前当てゲームにようこそ！")
     print("終了するときは q を入力してください．\n")
 
     while 1:
@@ -30,17 +30,17 @@ def city_name_guesser(data: geoapi.GeoAPIInterface) -> None:
             print("すべて正解しました！おめでとう！")
             break
         question, answer = choice(data.dataset)
-        response = input("「{}」の読みは何でしょうか？ひらがなで答えてください >>> ".format(question))
+        response = input(f"「{question}」の読みは何でしょうか？ひらがなで答えてください >>> ")
 
         if response == answer:
             print("正解！")
             data.dataset.remove((question, answer))
-            print("残りは{}問あります．".format(len(data.dataset)))
+            print(f"残りは{len(data.dataset)}問あります．")
         elif response == "q":
             break
         else:
-            print("不正解！正解は「{}」でした！".format(answer))
-            print("残りは{}問あります．".format(len(data.dataset)))
+            print(f"不正解！正解は「{answer}」でした！")
+            print(f"残りは {len(data.dataset)} 問あります．")
     end_game()
 
 
