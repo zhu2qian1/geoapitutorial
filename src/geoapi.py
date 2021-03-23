@@ -3,6 +3,8 @@ from urllib import parse
 
 import requests as req
 
+path = ".\\json\\fetched.json"
+
 
 class GeoAPIInterface:
     """
@@ -66,10 +68,10 @@ def update_fetched_file(prefecture: str) -> None:
     """
     Update fetched.json.
     """
-    with open(".\\json\\fetched.json", encoding="utf8") as f:
+    with open(path, encoding="utf8") as f:
         d: list = json.load(f)
         d.append(prefecture)
-    with open(".\\json\\fetched.json", mode="w", encoding="utf8") as f:
+    with open(path, mode="w", encoding="utf8") as f:
         json.dump(d, f, indent=2, ensure_ascii=False)
     return None
 
@@ -93,7 +95,7 @@ def hasfetched(prefecture: str) -> bool:
     """
     check if the prefecture has been fetched already.
     """
-    with open(".\\json\\fetched.json", encoding="utf8") as f:
+    with open(path, encoding="utf8") as f:
         d = json.load(f)
     if prefecture in d:
         return True
