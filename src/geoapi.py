@@ -35,7 +35,7 @@ class GeoAPIInterface:
             raise ValueError("The name is not valid.")
 
         self.prefecture = prefecture
-        if hasfetched(prefecture):
+        if has_fetched(prefecture):
             self.json = fetch_pref_data(prefecture)
         else:
             self.response: req.Request = req.get(
@@ -95,7 +95,7 @@ def create_new_json(prefecture: str, d: dict) -> None:
     return None
 
 
-def hasfetched(prefecture: str) -> bool:
+def has_fetched(prefecture: str) -> bool:
     """
     check if the prefecture has been fetched already.
     """
