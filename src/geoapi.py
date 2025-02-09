@@ -26,6 +26,7 @@ class GeoAPIInterface:
         Optimized for games.
     """
 
+    # todo stop downloading data in __init__
     def __init__(self, prefecture: str):
         """
         Fetch data of GeoAPI.
