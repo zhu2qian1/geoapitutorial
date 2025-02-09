@@ -1,7 +1,9 @@
-from pyi.Prefecture import Prefecture
 from urllib import parse
+
 import json
 import requests as req
+
+from pyi.Prefecture import Prefecture
 
 path = ".\\json\\fetched.json"
 
