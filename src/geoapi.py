@@ -30,7 +30,7 @@ class GeoAPIInterface:
         """
         Fetch data of GeoAPI.
         """
-        if not validate(prefecture):
+        if not has_downloaded(prefecture):
             raise ValueError("The name is not valid.")
 
         self.prefecture = prefecture
@@ -105,14 +105,14 @@ def hasfetched(prefecture: str) -> bool:
     return False
 
 
-def validate(pref_name: str) -> bool:
+def has_downloaded(pref_name: str) -> bool:
     """
     Check whether the prefecture is valid.
     """
     import json
 
     with open(".\\json\\prefectures.json", encoding="utf8") as f:
-        prefectures: list = json.load(f)
+        prefectures: list[str] = json.load(f)
     if pref_name not in prefectures:
         return False
     return True
