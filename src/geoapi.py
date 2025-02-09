@@ -63,7 +63,7 @@ def fetch_pref_data(prefecture: str) -> dict:
     d: dict
         Raw json.
     """
-    with open(".\\json\\{}.json".format(prefecture), encoding="utf8") as f:
+    with open(f".\\json\\{prefecture}.json", encoding="utf8") as f:
         d: dict = json.load(f)
     return d
 
