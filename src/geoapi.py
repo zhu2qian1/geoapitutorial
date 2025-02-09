@@ -1,6 +1,6 @@
-import json
+from pyi.Prefecture import Prefecture
 from urllib import parse
-
+import json
 import requests as req
 
 path = ".\\json\\fetched.json"
@@ -51,7 +51,7 @@ class GeoAPIInterface:
         self.dataset: list[tuple] = [(i["city"], i["city_kana"]) for i in self.contents]
 
 
-def fetch_pref_data(prefecture: str) -> dict:
+def fetch_pref_data(prefecture: str) -> Prefecture:
     """
     Fetch prefecture data.
     Parameters
@@ -64,7 +64,7 @@ def fetch_pref_data(prefecture: str) -> dict:
         Raw json.
     """
     with open(f".\\json\\{prefecture}.json", encoding="utf8") as f:
-        d: dict = json.load(f)
+        d: Prefecture = json.load(f)
     return d
 
 
