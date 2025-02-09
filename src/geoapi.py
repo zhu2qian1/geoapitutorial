@@ -31,7 +31,7 @@ class GeoAPIInterface:
         """
         Fetch data of GeoAPI.
         """
-        if not has_downloaded(prefecture):
+        if not is_preset(prefecture):
             raise ValueError("The name is not valid.")
 
         self.prefecture = prefecture
@@ -106,7 +106,7 @@ def hasfetched(prefecture: str) -> bool:
     return False
 
 
-def has_downloaded(pref_name: str) -> bool:
+def is_preset(pref_name: str) -> bool:
     """
     Check whether the prefecture is valid.
     """
